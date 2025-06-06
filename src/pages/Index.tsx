@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Moon, Sun, Github, Linkedin, ExternalLink, Menu, X } from "lucide-react";
@@ -33,7 +32,7 @@ const Index = () => {
     <div className="min-h-screen bg-background transition-colors duration-300">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
-        <div className="container mx-auto px-4 py-3 sm:py-4 flex justify-between items-center">
+        <div className="container mx-auto px-2 sm:px-4 py-3 sm:py-4 flex justify-between items-center">
           <h1 className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
             MKN
           </h1>
@@ -78,7 +77,7 @@ const Index = () => {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border">
-            <div className="container mx-auto px-4 py-3 flex flex-col gap-3">
+            <div className="container mx-auto px-2 sm:px-4 py-3 flex flex-col gap-3">
               <a href="#about" className="hover:text-primary transition-colors py-2 text-sm" onClick={closeMobileMenu}>About</a>
               <a href="#skills" className="hover:text-primary transition-colors py-2 text-sm" onClick={closeMobileMenu}>Skills</a>
               <a href="#projects" className="hover:text-primary transition-colors py-2 text-sm" onClick={closeMobileMenu}>Projects</a>
@@ -92,7 +91,7 @@ const Index = () => {
       <Hero />
 
       {/* About Section */}
-      <section id="about" className="py-12 sm:py-16 md:py-20 bg-muted/30 px-4">
+      <section id="about" className="py-12 sm:py-16 md:py-20 bg-muted/30 px-2 sm:px-4">
         <div className="container mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">About Me</h2>
           <div className="max-w-4xl mx-auto">
@@ -137,7 +136,7 @@ const Index = () => {
       <ContactSection />
 
       {/* Footer */}
-      <footer className="bg-muted py-6 sm:py-8 px-4">
+      <footer className="bg-muted py-6 sm:py-8 px-2 sm:px-4">
         <div className="container mx-auto text-center">
           <div className="flex justify-center gap-4 sm:gap-6 mb-4">
             <a
