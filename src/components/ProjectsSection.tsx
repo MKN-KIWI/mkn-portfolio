@@ -57,47 +57,47 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+    <section id="projects" className="py-12 sm:py-16 md:py-20 bg-muted/30 px-4">
+      <div className="container mx-auto">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Featured Projects</h2>
         
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow group">
               <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
               </div>
               
-              <CardHeader>
-                <CardTitle className="text-lg">{project.title}</CardTitle>
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="text-base sm:text-lg leading-tight">{project.title}</CardTitle>
               </CardHeader>
               
-              <CardContent className="space-y-4">
-                <p className="text-sm text-muted-foreground line-clamp-3">
+              <CardContent className="space-y-3 sm:space-y-4 p-4 sm:p-6 pt-0">
+                <p className="text-xs sm:text-sm text-muted-foreground line-clamp-3 leading-relaxed">
                   {project.description}
                 </p>
                 
                 <div className="flex flex-wrap gap-1">
                   {project.technologies.map((tech) => (
-                    <Badge key={tech} variant="outline" className="text-xs">
+                    <Badge key={tech} variant="outline" className="text-xs px-2 py-1">
                       {tech}
                     </Badge>
                   ))}
                 </div>
                 
-                <div className="flex gap-2 pt-2">
+                <div className="flex flex-col sm:flex-row gap-2 pt-2">
                   {project.liveUrl !== "#" && (
-                    <Button size="sm" className="flex-1">
+                    <Button size="sm" className="flex-1 text-xs sm:text-sm">
                       <a 
                         href={project.liveUrl} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1"
+                        className="flex items-center justify-center gap-1"
                       >
                         <ExternalLink className="h-3 w-3" />
                         Live Demo
@@ -105,12 +105,12 @@ const ProjectsSection = () => {
                     </Button>
                   )}
                   
-                  <Button variant="outline" size="sm" className="flex-1">
+                  <Button variant="outline" size="sm" className="flex-1 text-xs sm:text-sm">
                     <a 
                       href={project.githubUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1"
+                      className="flex items-center justify-center gap-1"
                     >
                       <Github className="h-3 w-3" />
                       Code
@@ -122,8 +122,8 @@ const ProjectsSection = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12">
-          <Button variant="outline" size="lg">
+        <div className="text-center mt-8 sm:mt-12">
+          <Button variant="outline" size="lg" className="w-full sm:w-auto">
             <a 
               href="https://github.com/MrMKN" 
               target="_blank" 
