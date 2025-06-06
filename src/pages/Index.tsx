@@ -33,41 +33,44 @@ const Index = () => {
     <div className="min-h-screen bg-background transition-colors duration-300">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+        <div className="container mx-auto px-4 py-3 sm:py-4 flex justify-between items-center">
+          <h1 className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
             MKN
           </h1>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
-            <a href="#about" className="hover:text-primary transition-colors text-sm">About</a>
-            <a href="#skills" className="hover:text-primary transition-colors text-sm">Skills</a>
-            <a href="#projects" className="hover:text-primary transition-colors text-sm">Projects</a>
-            <a href="#contact" className="hover:text-primary transition-colors text-sm">Contact</a>
+          <div className="hidden md:flex items-center gap-4 lg:gap-6">
+            <a href="#about" className="hover:text-primary transition-colors text-sm lg:text-base">About</a>
+            <a href="#skills" className="hover:text-primary transition-colors text-sm lg:text-base">Skills</a>
+            <a href="#projects" className="hover:text-primary transition-colors text-sm lg:text-base">Projects</a>
+            <a href="#contact" className="hover:text-primary transition-colors text-sm lg:text-base">Contact</a>
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="h-8 w-8 lg:h-10 lg:w-10"
             >
-              {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+              {theme === "dark" ? <Sun className="h-3 w-3 lg:h-4 lg:w-4" /> : <Moon className="h-3 w-3 lg:h-4 lg:w-4" />}
             </Button>
           </div>
 
           {/* Mobile Navigation Button */}
-          <div className="md:hidden flex items-center gap-2">
+          <div className="md:hidden flex items-center gap-1">
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="h-8 w-8"
             >
-              {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+              {theme === "dark" ? <Sun className="h-3 w-3" /> : <Moon className="h-3 w-3" />}
             </Button>
             <Button
               variant="ghost"
               size="icon"
               onClick={toggleMobileMenu}
+              className="h-8 w-8"
             >
-              {mobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+              {mobileMenuOpen ? <X className="h-3 w-3" /> : <Menu className="h-3 w-3" />}
             </Button>
           </div>
         </div>
@@ -75,11 +78,11 @@ const Index = () => {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border">
-            <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-              <a href="#about" className="hover:text-primary transition-colors py-2" onClick={closeMobileMenu}>About</a>
-              <a href="#skills" className="hover:text-primary transition-colors py-2" onClick={closeMobileMenu}>Skills</a>
-              <a href="#projects" className="hover:text-primary transition-colors py-2" onClick={closeMobileMenu}>Projects</a>
-              <a href="#contact" className="hover:text-primary transition-colors py-2" onClick={closeMobileMenu}>Contact</a>
+            <div className="container mx-auto px-4 py-3 flex flex-col gap-3">
+              <a href="#about" className="hover:text-primary transition-colors py-2 text-sm" onClick={closeMobileMenu}>About</a>
+              <a href="#skills" className="hover:text-primary transition-colors py-2 text-sm" onClick={closeMobileMenu}>Skills</a>
+              <a href="#projects" className="hover:text-primary transition-colors py-2 text-sm" onClick={closeMobileMenu}>Projects</a>
+              <a href="#contact" className="hover:text-primary transition-colors py-2 text-sm" onClick={closeMobileMenu}>Contact</a>
             </div>
           </div>
         )}
