@@ -12,6 +12,7 @@ const skills = [
 ];
 
 const technologies = [
+  { name: "Python", color: "from-yellow-500 to-teal-500" },
   { name: "Django", color: "from-green-500 to-emerald-500" },
   { name: "Telegram API", color: "from-blue-500 to-cyan-500" },
   { name: "Git", color: "from-orange-500 to-red-500" },
@@ -19,6 +20,7 @@ const technologies = [
   { name: "Shell Script", color: "from-gray-500 to-slate-500" },
   { name: "Python Libraries", color: "from-yellow-500 to-orange-500" },
   { name: "Static Sites", color: "from-purple-500 to-pink-500" },
+  { name: "PHP Laravel", color: "from-orange-500 to-red-500" },
   { name: "Telegram Bots", color: "from-indigo-500 to-purple-500" },
   { name: "Full Stack Development", color: "from-pink-500 to-rose-500" }
 ];

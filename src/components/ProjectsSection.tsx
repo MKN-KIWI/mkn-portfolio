@@ -8,26 +8,26 @@ import { useState } from "react";
 
 const projects = [
   {
-    title: "Weblysi.in - Tech Startup",
+    title: "weblysi.in - Tech Startup",
     description: "My tech startup providing web development and digital solutions. A comprehensive platform offering various web services and solutions for businesses.",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop",
-    technologies: ["Python", "Django", "React", "MongoDB"],
+    technologies: [],
     liveUrl: "https://weblysi.in",
     githubUrl: "#",
     gradient: "from-purple-500 to-pink-500"
   },
   {
-    title: "Clinic Management System",
-    description: "A comprehensive clinic management system built with Django. Features patient management, appointment scheduling, and medical records.",
+    title: "Clinic Management Software",
+    description: "A comprehensive clinic management software built with Django. Features patient management, appointment scheduling, and medical records.",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=400&fit=crop",
-    technologies: ["Django", "Python", "PostgreSQL", "Bootstrap"],
+    technologies: ["Django", "Python", "SQL", "Bootstrap"],
     liveUrl: "#",
     githubUrl: "https://github.com/MrMKN",
     gradient: "from-blue-500 to-cyan-500"
   },
   {
-    title: "Telegram Bot Framework",
-    description: "Advanced Telegram bot development framework with API integration. Used for creating various automation and utility bots.",
+    title: "Telegram Bot",
+    description: "Advanced Telegram bot development with API integration. Used for creating various automation and utility bots.",
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop",
     technologies: ["Python", "Telegram API", "MongoDB", "Docker"],
     liveUrl: "#",
@@ -35,28 +35,28 @@ const projects = [
     gradient: "from-green-500 to-emerald-500"
   },
   {
-    title: "Student Mentoring Platform",
-    description: "A platform for mentoring college students with project guidance and resources. Built with PHP and Python integration.",
+    title: "Student Mentoring",
+    description: "Mentoring college students in web development and Python & PHP programming. Providing guidance and resources for aspiring developers.",
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=400&fit=crop",
-    technologies: ["PHP", "Laravel", "Python", "MySQL"],
+    technologies: ["Laravel", "Django", "MySQL", "Stripe"],
     liveUrl: "#",
     githubUrl: "https://github.com/MrMKN",
     gradient: "from-orange-500 to-red-500"
   },
   {
-    title: "Python Libraries Collection",
-    description: "Collection of useful Python libraries and tools for various development tasks. Open source contributions to the Python community.",
+    title: "Fast2SMS Python Library",
+    description: "A Python library for Fast2SMS API integration. Simplifies sending SMS messages using Fast2SMS service.",
     image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=400&fit=crop",
-    technologies: ["Python", "PyPI", "Documentation", "Testing"],
+    technologies: ["Python", "PyPI", "API"],
     liveUrl: "#",
     githubUrl: "https://github.com/MrMKN",
     gradient: "from-indigo-500 to-purple-500"
   },
   {
     title: "Portfolio & Static Sites",
-    description: "Collection of beautiful static websites and portfolios created for various clients and personal projects.",
+    description: "About me and my work. A collection of static websites showcasing my projects, skills, and experiences.",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop",
-    technologies: ["HTML", "CSS", "JavaScript", "React"],
+    technologies: ["HTML", "CSS", "TypeScript", "React"],
     liveUrl: "https://mr-mkn.in",
     githubUrl: "https://github.com/MrMKN",
     gradient: "from-pink-500 to-rose-500"
@@ -123,22 +123,11 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
                 className="flex items-center justify-center gap-1"
               >
                 <ExternalLink className="h-3 w-3" />
-                Live Demo
+                Open Site
               </a>
             </Button>
           )}
           
-          <Button variant="outline" size="sm" className="flex-1 text-xs sm:text-sm border-2 hover:scale-105 transition-transform duration-200 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700">
-            <a 
-              href={project.githubUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-1"
-            >
-              <Github className="h-3 w-3" />
-              Code
-            </a>
-          </Button>
         </div>
       </CardContent>
     </Card>

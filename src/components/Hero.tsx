@@ -19,9 +19,14 @@ const Hero = () => {
       <div className="container mx-auto text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Profile Image with Lazy Loading */}
-          <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32 mx-auto mb-4 sm:mb-6 md:mb-8">
+          <div className="relative w-32 h-32 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32 mx-auto mb-4 sm:mb-6 md:mb-8">
             {!logoLoaded && (
-              <Skeleton className="w-full h-full rounded-full bg-gradient-to-r from-purple-200 to-pink-200 dark:from-purple-800 dark:to-pink-800" />
+              <img
+                src="/logo.png"
+                alt="Loading Logo Frame"
+                className="w-full h-full rounded-full object-cover border-2 border-purple-300 dark:border-purple-700"
+              />
+              // <Skeleton className="w-full h-full rounded-full bg-gradient-to-r from-purple-200 to-pink-200 dark:from-purple-800 dark:to-pink-800" />
             )}
             <div 
               className={`${logoLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500 w-full h-full rounded-full bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 flex items-center justify-center text-white text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 animate-gradient bg-[length:200%_200%]`}
@@ -33,7 +38,7 @@ const Hero = () => {
           
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 px-1 sm:px-2">
             <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 bg-clip-text text-transparent animate-gradient bg-[length:200%_200%] drop-shadow-sm">
-              Muhammed KN
+              Mohammed KN
             </span>
           </h1>
           

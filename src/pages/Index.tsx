@@ -107,7 +107,7 @@ const Index = () => {
                       <span className="text-sm sm:text-base">Kannur, Kerala, India</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-sm sm:text-base">Pre Degree (+2) & ITI E-Mech</span>
+                      <span className="text-sm sm:text-base">No Degree Only +2 🤗</span>
                     </div>
                   </div>
                 </div>
@@ -165,7 +165,7 @@ const Index = () => {
             </a>
           </div>
           <p className="text-muted-foreground text-xs sm:text-sm">
-            © 2024 Muhammed KN. All rights reserved.
+            © 2025 MKN. All rights reserved.
           </p>
         </div>
       </footer>
