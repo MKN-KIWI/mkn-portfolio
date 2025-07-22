@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, ExternalLink } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Send, ExternalLink } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useState } from "react";
 
@@ -51,7 +51,7 @@ const Hero = () => {
           <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto px-1 sm:px-2 leading-relaxed">
             Crafting digital experiences with <span className="text-yellow-600 font-semibold">Python</span>, 
             <span className="text-blue-600 font-semibold"> Web Technologies</span>, and innovative solutions. 
-            Founder of <span className="text-purple-600 font-semibold">Weblysi.in</span> and passionate about building impactful applications.
+            Founder of <span className="text-purple-600 font-semibold">Weblysi.in</span>, <span className="text-green-600 font-semibold">Python Telegram Bot Developer</span> and passionate about building impactful applications.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 md:mb-12 px-1 sm:px-2">
@@ -87,7 +87,15 @@ const Hero = () => {
               <Linkedin className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 text-blue-600 dark:text-blue-400" />
             </a>
             <a
-              href="https://mr-mkn.in"
+              href="https://telegram.dog/mr_mkn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 sm:p-3 rounded-full bg-sky-400 hover:bg-sky-500 dark:bg-sky-600 dark:hover:bg-sky-500 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+            >
+              <Send className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 text-white" />
+            </a>
+            <a
+              href="https://weblysi.in"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 sm:p-3 rounded-full bg-gradient-to-r from-green-100 to-emerald-200 dark:from-green-900 dark:to-emerald-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 hover:from-green-200 hover:to-emerald-300 dark:hover:from-green-800 dark:hover:to-emerald-700"
